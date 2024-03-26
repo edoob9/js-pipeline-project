@@ -36,7 +36,7 @@ pipeline {
 		}
 		stage("deploy") {
 			steps {
-				echo "j" | sudo -S sh "docker-compose up -d"
+				sh "docker-compose up -d"
 			}
 		}
 	}
