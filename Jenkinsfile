@@ -50,6 +50,7 @@ pipeline {
 		// }
 		stage("deploy") {
 			steps {
+				sh "docker start fastapi-app"
 				sh "docker-compose up -d"
 			}
 		}
