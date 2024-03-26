@@ -13,6 +13,8 @@ pipeline {
 		}
 		stage("deploy") {
 			steps {
+                echo "${env.GIT_BRANCH}"
+                echo "${env.BUILD_ID}"
 				echo 'deploying the applicaiton...'
 			}
 		}
